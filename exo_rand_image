@@ -1,6 +1,4 @@
-```python
 import matplolib.pyplot as plt
 image = np.random.randint(0, 255, size = (10, 10, 3))
 plt.plot(image)
 plt.imshow()
-```
