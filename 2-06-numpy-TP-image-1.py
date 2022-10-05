@@ -274,7 +274,9 @@ ima = i.astype(np.uint8)
 c = np.square(p)
 r = np.sqrt(o)
 plt.imshow(o, cmap = 'gray')
+plt.show()
 plt.imshow(c, cmap = 'gray')
+plt.show()
 plt.imshow(ima, cmap = 'gray')
 
 
@@ -390,3 +392,5 @@ axes[2, 1].imshow(i, cmap = 'gray')
 axes[2, 0].imshow(r, cmap = 'gray')
 axes[0, 1].imshow(r, cmap = 'gray')
 axes[1, 2].imshow(r, cmap = 'gray')
+
+#fin du TP
