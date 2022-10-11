@@ -1,0 +1,15 @@
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('titanic.csv', index_col = 'PassengerId')
+df.isna().sum()
+len(df['Pclass'].unique())
+for elt in df['Pclass'].unique() :
+    msurv = (df['Survived'] == 1) & (df['Sex'] == 'male') & (df['Pclass'] == elt)
+    mtot = (df['Sex'] == 'male') & (df['Pclass'] == elt)
+    fmsurv = (df['Survived'] == 1) & (df['Sex'] == 'female') & (df['Pclass'] == elt)
+    fmtot = (df['Sex'] == 'female') & (df['Pclass'] == elt)
+    select = (msurv.sum() / mtot.sum(), fmsurv.sum() / fmtot.sum())
+    print(select)
+```
